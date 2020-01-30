@@ -14,7 +14,7 @@
 
 class Runtime{
     public:
-	Runtime(const MyTime& myt, double d = 0);
+	Runtime();
 	// accessors
 	double get_distance()const{return distance;}
 	MyTime get_time()const{return rtime;}

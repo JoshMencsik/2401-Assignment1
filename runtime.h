@@ -22,7 +22,7 @@ class Runtime{
 	void set_time(const MyTime& myt){rtime = myt;}
 	void set_distance(const double& d){distance = d;}
 	// average pace
-	MyTime pace(){return rtime/distance;}
+	MyTime pace() const {return rtime/distance;}
 	// overloaded operators - do the math on both time and distance
 	Runtime operator +(const Runtime& rhs)const;
 	Runtime operator -(const Runtime& rhs)const;

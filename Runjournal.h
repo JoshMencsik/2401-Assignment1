@@ -17,38 +17,37 @@ class Runjournal {
     Runjournal();
     //getters
     int getUsed() const {return used;}
-    int getData() const {return data;}
+    Runtime getData(int index) const {return data[index];}
     //setters
     void setUsed(int u) {used = u;}
-    void setJournal(Runtime d[]) {data = d;}
     void setRun(int index, const Runtime& rt) {data[index] = rt;}
 
     //adds a runtime onto the list and increases used
-    void addRun(const Runtime& rt);
+    void record(const Runtime& rt);
 
     //output all the runs
-    void seeAll() const;
+    void display() const;
 
-    //searches for a given time and gives the user the option to remove
-    void findTime(const Runtime& rt);
+    //searches for a given Runtime and gives the user the option to remove
+    void find_remove(const Runtime& rt);
 
     //search for all of a given distance and show it
-    void findDistance(double d) const;
+    void distance_view(double d) const;
 
     //sort data by time
-    void sortByTime();
+    void time_sort();
 
     //sort data by distance
-    void sortByDistance();
+    void distance_sort();
 
     //return a total for the time
-    MyTime findToalTime() const;
+    MyTime total_time() const;
 
     //return a total for the distance
-    double findTotalDistance() const;
+    double total_distance() const;
 
     //return the average pace for all the runs
-    MyTime findAveragePace() const;
+    MyTime average_pace() const;
 
 
 

@@ -57,7 +57,7 @@ bool Runtime::operator != (const Runtime& rhs) const {
 }
 
 bool Runtime::distance_equal(double d) const {
-    return (abs(distance - d) < .1);
+    return (abs(distance - d) < .01);
 }
 
 void Runtime::input(istream& ins) {
@@ -66,8 +66,8 @@ void Runtime::input(istream& ins) {
 }
 
 void Runtime::output(ostream& outs) const {
-    outs << "Time: " << rtime << endl;
-    outs << "Distance: " << distance;
+    outs << rtime;
+    outs << " " << distance;
 }
 
 Runtime operator *(const double& lhs, const Runtime& rhs) {

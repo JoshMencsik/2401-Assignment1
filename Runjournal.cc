@@ -112,4 +112,21 @@ MyTime Runjournal::average_pace() const {
     return average / used;
 }
 
+void Runjournal::save(ostream& ofs) const {
+
+    for (int i = 0; i < used; i++) {
+        data[i].output(ofs);
+        //prevents an extra space in the file
+        if (i != used - 1) {
+            ofs << endl;
+        }
+    }
+}
+
+void Runjournal::open(istream& ins) {
+
+    for (int i = 0; i < used; i++) {
+        data[i].input(ins);
+    }
+}
 

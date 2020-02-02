@@ -32,7 +32,7 @@ int main(){
      int choice;
      double dist;
 //file loading - do last 12th
-/*     ifs.open("runlog.txt");
+     ifs.open("runlog.txt");
      if(!ifs.fail()){
 	ifs>>tmp;
 	while(!ifs.eof()){
@@ -41,7 +41,8 @@ int main(){
 	}
 	ifs.close();
      } // if the file is not there we assume this is the first running
-*/
+
+
      do{
 	choice = menu();
 	switch(choice){
@@ -84,12 +85,12 @@ int main(){
 	} // bottom of the switch
     	}while(choice != 0);
 //file saving
-/*	ofs.open("runlog.txt");
+	ofs.open("runlog.txt");
 	if(!ofs.fail()){
 	    myruns.save(ofs); //11th
 	    ofs.close();
  	}
-*/
+
 
 return 0;
 }

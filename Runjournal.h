@@ -49,6 +49,12 @@ class Runjournal {
     //return the average pace for all the runs
     MyTime average_pace() const;
 
+    //saves data into a txt file
+    void save(std::ostream& ofs) const;
+
+    //updates data through pulling from a txt file
+    void open(std::istream& ins);
+
 
 
     private:
